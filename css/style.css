@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Carter+One&family=Courgette&family=Poiret+One&family=Sansita+Swashed:wght@400;700;900&display=swap");
 body {
 	margin: 0;
+	font-family: "Poiret One", cursive;
+	font-weight: bold;
+    font-size: 1.17rem;
+    letter-spacing: 0.09px;
 }
 h1 {
 	font-family: "Sansita Swashed", cursive;
@@ -11,17 +15,13 @@ h2 {
 	font-weight: normal;
 	font-size: 1.4rem;
 }
-p {
-	font-family: "Poiret One", cursive;
-	font-weight: bold;
-	font-size: 1.17rem;
+h3 {
+	font-family: "Acme", sans-serif;
+	font-size: 1.25rem;
+	font-weight: lighter;
 }
-small {
-	font-family: "Poiret One", cursive;
-	font-weight: bold;
-}
-hr{
-    margin: 2rem 0;
+hr {
+	margin: 2rem 0;
 }
 .brand-name {
 	font-family: "Courgette", cursive;
@@ -42,19 +42,26 @@ hr{
 	margin: auto;
 	text-align: center;
 }
-.primary-link{
-    text-decoration: none;
-    border: 2px solid;
-    padding: 0.5rem;
-    font-family: "Acme", sans-serif;
+.primary-link {
+	text-decoration: none;
+	border: 2px solid;
+	padding: 0.5rem;
+	font-family: "Acme", sans-serif;
 	font-weight: lighter;
-    letter-spacing: 1.2px;
+	letter-spacing: 1.2px;
 }
-.secondary-link{
-    text-decoration: none;
-    border: 2px solid;
-    padding: 0.5rem;
-    font-family: "Acme", sans-serif;
-    font-weight: lighter;
-    letter-spacing: 1.2px;
+.secondary-link {
+	text-decoration: none;
+	border: 2px solid;
+	padding: 0.5rem;
+	font-family: "Acme", sans-serif;
+	font-weight: lighter;
+	letter-spacing: 1.2px;
+}
+.list {
+	list-style: none;
+}
+.inline-list-items {
+	display: inline;
+	padding: 0 0.5rem;
 }
