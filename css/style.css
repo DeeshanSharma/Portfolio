@@ -20,6 +20,9 @@ small {
 	font-family: "Poiret One", cursive;
 	font-weight: bold;
 }
+hr{
+    margin: 2rem 0;
+}
 .brand-name {
 	font-family: "Courgette", cursive;
 	font-weight: normal;
@@ -38,4 +41,20 @@ small {
 	max-width: 70%;
 	margin: auto;
 	text-align: center;
+}
+.primary-link{
+    text-decoration: none;
+    border: 2px solid;
+    padding: 0.5rem;
+    font-family: "Acme", sans-serif;
+	font-weight: lighter;
+    letter-spacing: 1.2px;
+}
+.secondary-link{
+    text-decoration: none;
+    border: 2px solid;
+    padding: 0.5rem;
+    font-family: "Acme", sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1.2px;
 }
