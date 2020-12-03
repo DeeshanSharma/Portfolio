@@ -28,6 +28,7 @@ hr {
 	font-weight: normal;
 	font-size: 2.5rem;
 	text-align: center;
+	margin: 0.3rem 0;
 }
 .desc {
 	font-family: "Acme", sans-serif;
@@ -85,4 +86,14 @@ hr {
 }
 .active {
 	font-weight: bold;
+}
+.hero {
+	padding: 3rem 2rem;
+	margin: auto;
+	text-align: center;
+}
+.hero-img {
+	width: 40%;
+	margin: auto;
+	border-radius: 50%;
 }
