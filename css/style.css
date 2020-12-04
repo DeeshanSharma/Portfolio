@@ -125,3 +125,26 @@ small {
 	right: 0;
 	margin: 0;
 }
+@media only screen and (max-width: 500px) {
+	.nav-brand {
+		font-size: 1rem;
+	}
+	.nav-links {
+		font-size: 1rem;
+	}
+	nav .link {
+		padding: 0.2rem;
+	}
+	.footer-section {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.footer-section .link {
+		padding: 0.2rem;
+		font-size: 1rem;
+	}
+	.social .inline-list-items {
+		padding: 0.18rem;
+	}
+}
