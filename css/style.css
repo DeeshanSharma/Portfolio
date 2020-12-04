@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Carter+One&family=Courgette&family=Poiret+One&family=Sansita+Swashed:wght@400;700;900&display=swap");
+:root {
+	--primary-color-light: #d6adfc;
+	--primary-color: #9e34ff;
+	--primary-color-dark: #7b00eb;
+	--secondary-color-light: #fea8c9;
+	--secondary-color: #ff2579;
+	--secondary-color-dark: #f7005f;
+	--extra-color-light: #b1c2fc;
+	--extra-color: #3e6bff;
+	--extra-color-dark: #0037eb;
+}
 body {
 	margin: 0;
 	font-family: "Poiret One", cursive;
@@ -9,21 +20,28 @@ body {
 h1 {
 	font-family: "Sansita Swashed", cursive;
 	font-weight: bold;
+	margin: 1rem 0.5rem;
 }
 h2 {
 	font-family: "Carter One", cursive;
 	font-weight: normal;
 	font-size: 1.4rem;
+	margin: 1rem 0.5rem;
 }
 h3 {
 	font-family: "Acme", sans-serif;
 	font-size: 1.25rem;
 	font-weight: lighter;
+	margin: 1rem 0.5rem;
 }
 hr {
 	margin: 2rem 0;
 }
+span {
+	color: var(--primary-color-dark);
+}
 small {
+	color: white;
 	padding: 0 0.3rem;
 }
 .brand-name {
@@ -37,12 +55,13 @@ small {
 	font-family: "Acme", sans-serif;
 	font-size: 1.25rem;
 	font-weight: lighter;
+	margin: 1rem 0.5rem;
 }
 .container {
 	padding: 1rem 1rem;
 }
 .center-container {
-	max-width: 70%;
+	max-width: 75%;
 	margin: auto;
 	text-align: center;
 }
@@ -51,14 +70,29 @@ small {
 	padding: 0.5rem;
 	font-family: "Acme", sans-serif;
 	font-weight: lighter;
+	color: white;
 }
 .primary-link {
-	border: 2px solid;
+	background-color: var(--primary-color);
+	border: 2px solid var(--primary-color-light);
+	border-radius: 6px;
 	letter-spacing: 1.2px;
 }
+.primary-link:hover {
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color-dark);
+	background-color: white;
+}
 .secondary-link {
-	border: 2px solid;
+	background-color: var(--secondary-color);
+	border: 2px solid var(--secondary-color-light);
+	border-radius: 6px;
 	letter-spacing: 1.2px;
+}
+.secondary-link:hover {
+	border: 2px solid var(--secondary-color);
+	color: var(--secondary-color-dark);
+	background-color: white;
 }
 .list {
 	list-style: none;
@@ -70,7 +104,7 @@ small {
 	padding: 0 0.3rem;
 }
 .navigation {
-	border: 2px solid;
+	background-color: var(--primary-color-dark);
 }
 .nav-brand {
 	display: inline-block;
@@ -78,6 +112,7 @@ small {
 	font-family: "Acme", sans-serif;
 	font-weight: bold;
 	font-size: 1.5rem;
+	color: white;
 }
 .nav-links {
 	display: inline-block;
@@ -86,13 +121,18 @@ small {
 	position: absolute;
 	right: 0;
 }
+.nav-btn:hover {
+	color: var(--secondary-color-light);
+}
 .active {
 	font-weight: bold;
+	color: var(--secondary-color-light);
 }
 .hero {
 	padding: 3rem 2rem;
 	margin: auto;
 	text-align: center;
+	background-color: var(--primary-color-light);
 }
 .hero-img {
 	width: 40%;
@@ -101,10 +141,20 @@ small {
 	border-radius: 50%;
 }
 .section {
-	padding: 2rem;
+	padding: 1rem;
+	color: var(--secondary-color-light);
+}
+.colored {
+	color: white;
+	background-color: var(--secondary-color-light);
+}
+.dual-colored {
+	color: var(--primary-color);
+	background-color: var(--extra-color-light);
 }
 .footer {
 	padding: 1rem 3rem;
+	background-color: var(--primary-color);
 }
 .footer-section {
 	display: inline-block;
@@ -114,16 +164,21 @@ small {
 }
 .footer-heading {
 	font-weight: bold;
+	color: var(--extra-color-light);
 	padding-left: 0.8rem;
 }
 .lower-footer {
-	margin: 0.7rem 0;
+	background-color: var(--primary-color-dark);
+	padding: 0.7rem 0;
 }
 .social-icons {
 	display: inline;
 	position: absolute;
 	right: 0;
 	margin: 0;
+}
+footer .link:hover {
+	color: var(--secondary-color-light);
 }
 @media only screen and (max-width: 500px) {
 	.nav-brand {
