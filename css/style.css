@@ -135,9 +135,9 @@ small {
 	background-color: var(--primary-color-light);
 }
 .hero-img {
-	width: 40%;
+	width: 70%;
 	max-width: 350px;
-	margin: auto;
+	margin: 4rem auto 0;
 	border-radius: 50%;
 }
 .section {
@@ -148,9 +148,12 @@ small {
 	color: white;
 	background-color: var(--secondary-color-light);
 }
-.dual-colored {
-	color: var(--primary-color);
-	background-color: var(--extra-color-light);
+.purple-section {
+	color: var(--primary-color-light);
+}
+.purple-colored {
+	color: white;
+	background-color: var(--primary-color-light);
 }
 .footer {
 	padding: 1rem 3rem;
@@ -180,6 +183,12 @@ small {
 footer .link:hover {
 	color: var(--secondary-color-light);
 }
+.form{
+	width: 100%;
+	height: 960px;
+	overflow: hidden;
+	margin: 0;
+}
 @media only screen and (max-width: 500px) {
 	.nav-brand {
 		font-size: 1rem;
@@ -201,5 +210,8 @@ footer .link:hover {
 	}
 	.social .inline-list-items {
 		padding: 0.18rem;
+	}
+	.form{
+		height: 1130px;
 	}
 }
