@@ -23,6 +23,9 @@ h3 {
 hr {
 	margin: 2rem 0;
 }
+small {
+	padding: 0 0.3rem;
+}
 .brand-name {
 	font-family: "Courgette", cursive;
 	font-weight: normal;
@@ -59,27 +62,26 @@ hr {
 }
 .list {
 	list-style: none;
+	padding: 0;
+	margin: 0.5rem 0;
 }
 .inline-list-items {
 	display: inline;
-	padding: 0 0.5rem;
+	padding: 0 0.3rem;
 }
 .navigation {
 	border: 2px solid;
 }
 .nav-brand {
 	display: inline-block;
-	width: 30%;
-	margin: 2rem;
+	margin: 1rem 0 1rem 1rem;
 	font-family: "Acme", sans-serif;
 	font-weight: bold;
 	font-size: 1.5rem;
 }
 .nav-links {
 	display: inline-block;
-	width: 30%;
-	padding: 0;
-	margin: 2rem;
+	margin: 1rem 1rem 1rem 0;
 	text-align: right;
 	position: absolute;
 	right: 0;
@@ -94,9 +96,32 @@ hr {
 }
 .hero-img {
 	width: 40%;
+	max-width: 350px;
 	margin: auto;
 	border-radius: 50%;
 }
 .section {
 	padding: 2rem;
+}
+.footer {
+	padding: 1rem 3rem;
+}
+.footer-section {
+	display: inline-block;
+	margin: 0;
+	padding: 0.5rem 0;
+	width: 48%;
+}
+.footer-heading {
+	font-weight: bold;
+	padding-left: 0.8rem;
+}
+.lower-footer {
+	margin: 0.7rem 0;
+}
+.social-icons {
+	display: inline;
+	position: absolute;
+	right: 0;
+	margin: 0;
 }
