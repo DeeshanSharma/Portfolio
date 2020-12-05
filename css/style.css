@@ -61,7 +61,7 @@ p {
 	margin: 1rem 0.5rem;
 }
 .container {
-	padding: 1rem 1rem;
+	padding: 1rem;
 }
 .center-container {
 	max-width: 70%;
@@ -97,6 +97,18 @@ p {
 .secondary-link:hover {
 	border: 2px solid var(--secondary-color);
 	color: var(--secondary-color-dark);
+	background-color: white;
+}
+.extra-link {
+	background-color: var(--extra-color);
+	border: 2px solid var(--extra-color-light);
+	border-radius: 6px;
+	margin: 0.5rem;
+	letter-spacing: 1.2px;
+}
+.extra-link:hover {
+	border: 2px solid var(--extra-color);
+	color: var(--extra-color-dark);
 	background-color: white;
 }
 .list {
