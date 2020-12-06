@@ -40,8 +40,8 @@ hr {
 span {
 	color: var(--primary-color-dark);
 }
-small{
-	font-family: 'Times New Roman', Times, serif;
+small {
+	font-family: "Times New Roman", Times, serif;
 }
 p {
 	padding: 0 0.5rem;
@@ -131,7 +131,7 @@ p {
 	font-size: 1.5rem;
 	color: white;
 }
-.nav-brand .link{
+.nav-brand .link {
 	padding: 0;
 	margin: 0;
 	font-weight: bold;
@@ -166,7 +166,7 @@ p {
 	padding: 1rem;
 	color: var(--secondary-color-light);
 }
-.colored {
+.pink-colored {
 	color: white;
 	background-color: var(--secondary-color-light);
 }
@@ -212,11 +212,23 @@ footer .link:hover {
 	overflow: hidden;
 	margin: 0;
 }
+.blog {
+	padding: 2rem 4rem 3rem;
+	font-size: 1.1em;
+}
+.blog h2 {
+	padding: 0;
+	margin: 0;
+	color: var(--secondary-color-light);
+}
+.blog a {
+	margin: 0;
+}
 @media only screen and (max-width: 770px) {
 	.brand-name {
 		font-size: 2.5rem;
 	}
-	.center-container{
+	.center-container {
 		max-width: 87%;
 	}
 }
@@ -244,5 +256,8 @@ footer .link:hover {
 	}
 	.form {
 		height: 1130px;
+	}
+	.blog {
+		padding: 2rem 1.5rem 3rem;
 	}
 }
