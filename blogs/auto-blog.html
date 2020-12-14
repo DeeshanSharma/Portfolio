@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<script src="https://kit.fontawesome.com/e231f5c914.js" crossorigin="anonymous"></script>
+		<title>Auto Blog Post | Deeshan Sharma</title>
+	</head>
+
+	<body>
+		<nav class="navigation">
+			<div class="nav-brand"><a href="/" class="link"> Deeshan Sharma</a></div>
+			<ul class="list nav-links">
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/">Home</a>
+				</li>
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/projects.html">Projects</a>
+				</li>
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/blogs.html">Blogs</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="hero">
+			<h1 class="brand-name">Behind The Scenes: <span>Auto Blog Post</span></h1>
+			<p class="desc">A simple Python Automation program to automate the process of writing the blog post HTML code</p>
+		</header>
+		<section class="section">
+			<div class="container purple-section blog">
+				<p><h2>Back Story:</h2>So, I decided to do live blogging while creating any project with the motive of guiding you through the process of creating a project, thinking process, problems faced and etc. And upload these blogs on my portfolio website. So, to upload it I need to write the HTML code for each blog post and that too has the same code except for the blog content. So, to avoid this repetion and to save time I am making this Python program that will do all of my things automatically and save my lots of time. <br><br><h2>Requirements:</h2>So, this app must take a txt file with the raw blog written in it and read its contents and append it to the predefined HTML code. And for the headings and description I am thinking of using the regular expression to match certain keyword in the blog file and put it at their approptiate place. So, I am thinking of using '%h%, %d%' something like this and then match it using the 'Re' Module available in Python.<br><br><h2>Main Process:</h2>So, starting with importing the modules I have defined a function to read and store the raw blog content from the file to a variable. Now for writing the the complete code to a file I need to get the file name so I need to figure out whether that will be given by the user or it should be given in the raw blog itself. So, I decided to give it in the raw blog file so that it remains automatic. Now what I need to do is to figure out a way to place the title, header and description to their respective place in the pre-defined HTML code. So, for the ease I have defined another function to process the code and place the required things and I have moved the defination of the header and footer code inside the same function so that when I get the things using regular expression I will use f string to place all of them at their respective place. Now I need to define a fuction to write all the data to a HTML file. So, I tested this application against a sample file and it is working so far and now I'm gonna test this against this blog to check whether it will work against huge file or not. So, the test failed the error is with the regular expression the program ran out of index as the blog is really huge so I need to figure out another way of doing the same thing. I got an idea for doing this so I will be using the built-in string function 'split'. And split it at '%p %' (without any space, space added as the program was also spliting the text here) which is the defination for the main content in the raw blog and I will use the index no 1 as it is the required thing and then rest is the same and now I will test the app again with this same blog. This time the test is successfull. Now I will push the code. The next required thing to do is to move the file form the current directory to the blogs directory the problem here is I use WSL and also Windows for coding and the directory path is different for both the Operating Systems so, now I need to add a condition to check the Operating System and set the path automatically according to the OS this app is running on. So, for that I will be using os.name and set the condition. I can also automate commiting and pushing the code to the portfolio but I won't do that because I can make changes if required.<br><br>This blog was added using the Python Auto Blog Post application and it is working correctly.</p><br><a href="https://github.com/DeeshanSharma/Auto-Blog-Post-for-Portfolio" class="link secondary-link" target="_blank">Source Code</a>
+			</div>
+		</section>
+		<footer>
+			<div class="footer">
+				<div class="footer-section">
+					<div class="footer-heading desc">Site Map:</div>
+					<ul class="list">
+						<li class="inline-list-items">
+							<a class="link" href="/"><i class="fas fa-home"></i> Home</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/projects.html"><i class="fas fa-lightbulb"></i> Projects</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/blogs.html"><i class="fas fa-book-open"></i> Blogs</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/feedback-suggestions.html"><i class="fas fa-comments"></i> Feedback & Suggestions</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<div class="footer-heading desc">Let's Connect Find Me Here:</div>
+					<ul class="list social">
+						<li class="inline-list-items">
+							<a class="link" href="https://www.instagram.com/i_am___unknown__" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://github.com/DeeshanSharma" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://twitter.com/DeeshanSharma_" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://www.youtube.com/c/TechTeach_ds" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lower-footer">
+				<small>©2020 Deeshan Sharma</small>
+				<ul class="list social-icons">
+					<li class="inline-list-items">
+						<a href="https://www.instagram.com/i_am___unknown__" class="link" target="_blank"><i class="fab fa-instagram"></i></a>
+					</li>
+					<li class="inline-list-items">
+						<a href="https://github.com/DeeshanSharma" class="link" target="_blank"><i class="fab fa-github"></i></a>
+					</li>
+					<li class="inline-list-items">
+						<a href="https://twitter.com/DeeshanSharma_" class="link" target="_blank"><i class="fab fa-twitter"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
