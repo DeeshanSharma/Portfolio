@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<script src="https://kit.fontawesome.com/e231f5c914.js" crossorigin="anonymous"></script>
+		<title>Fun Translation App | Deeshan Sharma</title>
+	</head>
+
+	<body>
+		<nav class="navigation">
+			<div class="nav-brand"><a href="/" class="link"> Deeshan Sharma</a></div>
+			<ul class="list nav-links">
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/">Home</a>
+				</li>
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/projects.html">Projects</a>
+				</li>
+				<li class="inline-list-items">
+					<a class="link nav-btn" href="/blogs.html">Blogs</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="hero">
+			<h1 class="brand-name">Behind The Scenes:  <span>Fun Translation Web App</span></h1>
+			<p class="desc">This is a fun API based language translation app. Use this to translate english language to some other funny ones and have fun.</p>
+		</header>
+		<section class="section">
+			<div class="container purple-section blog">
+				<p>
+					<h2>Back Story:</h2>So, as I have done all the lectures of Neog Camp, now it's time to build all the projects and submit all of them for review. I have already completed most of them the only lefts are react one and then fun translation one. So, today I will be building the fun translation web app. So, talking about it's functionality it will basically work on the API calls it will send a text to <a href="https://funtranslations.com" target="_blank">this</a> website using it's APIs and then receive a response in JSON format and then retrive the required data and show it to the user. So, let's see what are the requirements for this web app. <br><br><h2>Requirements:</h2>So, first let's browse through the website and get some APIs. So, I have decided to use the 'pirate, yoda, navi and groot' API. The second thing is to have a basic design stucture in the mind so that it's easier to code. And I don't think we need anything else as rest is coding part the most enjoying and interesting thing so let's begin with the code. <br><br><h2>Main Process:</h2>So, I will be using the simple approch as used in all the previous ones which is to break the problem into smaller chunks and then work onto them. Starting by initializing a repository, I have created a file index.html. Now I will tell you the idea and stucture of the web app so I will be using 4 languages ie., 4 APIs so the user will first select the language, then enter the text to convert and click on the translate button and in the backend an API call will be made based on the language selected and the converted text will be displayed to the user. So, now starting with the nav bar first, very simple using nav tag and h1 tag. By the way I will not work on the styling part now, but build the structure first. Now creating a dropdown menu to select the language using select tag next I have created textarea, a button, again a textarea and a simple div container for the about section. Now time for the footer, so this is also really simple using footer tag now I have commit the changes. Now time for the styling part starting with creating a directory named css and inside that a style.css file and link it to the index.html file. So, firstly importing the fonts from Google Fonts and then defining the body tag margin and padding both 0 and now defining two color variables for main color and another for the hover state now giving the nav bar some padding, border, color and align the text to centre. So, the process is same for all the elements so I will not document it and I will directly start the JavaScript file to give the web app functionality and commit all the changes. So, again starting with creating a directory js and a file myapp.js inside it. So, starting with getting the elements first, we can use either method queryselector or getelementbyid for that, here I will use getelementbyid and grab the dropdown menu both the textarea and the button now with the main logic and fuctions so, I have defined a fuction to set the API based on the language selection and return the final API. Now for the second fuction it will grab the value of the textarea and assign it to a variable and then return the final API with the argument parsed. Now defining a fuction for error handling which will console log the the error message and also show an alert to the user. Now comes the main fuction which later be used as the on click event listner fuction to the button. Here first I will call the setAPI fuction and pass it's return value to the serveAPI fuction and now we will use the fetch fuction to fetch the response of the API by sending a http request and then chaining a then and parsing the response as JSON and again chaining a then and assign the converted text to the the textarea by using the innertext and now finally assigning an event listner to the button which will be triggered when the button is clicked and will call our fuction. And hence this completes my project now committing all the changes and pushing it to remote repository on GitHub. Now I will host the web app using Netlify so after signing into it I have selected the new site option from GitHub and selecting the respective repository and now going into the site settings and changing it's name to fun-translations.netlify.app. <br><br>So, this was my project for the markSeven submission for Neog Camp.
+				</p>
+				<br>
+				<a href="https://fun-translations.netlify.app" target="_blank" class="link primary-link">Check it Out</a>
+				<a href="https://github.com/DeeshanSharma/fun-translation-app" class="link secondary-link" target="_blank">Source Code</a>
+			</div>
+		</section>
+		<footer>
+			<div class="footer">
+				<div class="footer-section">
+					<div class="footer-heading desc">Site Map:</div>
+					<ul class="list">
+						<li class="inline-list-items">
+							<a class="link" href="/"><i class="fas fa-home"></i> Home</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/projects.html"><i class="fas fa-lightbulb"></i> Projects</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/blogs.html"><i class="fas fa-book-open"></i> Blogs</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="/feedback-suggestions.html"><i class="fas fa-comments"></i> Feedback & Suggestions</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<div class="footer-heading desc">Let's Connect Find Me Here:</div>
+					<ul class="list social">
+						<li class="inline-list-items">
+							<a class="link" href="https://www.instagram.com/i_am___unknown__" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://github.com/DeeshanSharma" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://twitter.com/DeeshanSharma_" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+						</li>
+						<li class="inline-list-items">
+							<a class="link" href="https://www.youtube.com/c/TechTeach_ds" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lower-footer">
+				<small>�2020 Deeshan Sharma</small>
+				<ul class="list social-icons">
+					<li class="inline-list-items">
+						<a href="https://www.instagram.com/i_am___unknown__" class="link" target="_blank"><i class="fab fa-instagram"></i></a>
+					</li>
+					<li class="inline-list-items">
+						<a href="https://github.com/DeeshanSharma" class="link" target="_blank"><i class="fab fa-github"></i></a>
+					</li>
+					<li class="inline-list-items">
+						<a href="https://twitter.com/DeeshanSharma_" class="link" target="_blank"><i class="fab fa-twitter"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
