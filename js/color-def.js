@@ -12,7 +12,7 @@ for (var k = 0; k < sections.length; k++) {
 	if (i > 3) {
 		i = 0;
 	}
-	if (url === "/blogs.html") {
+	if (url === "/blogs") {
 		buttons[k].className += buttonClasses[j];
 		j += 1;
 		if (j > 1) {
