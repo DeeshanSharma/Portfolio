@@ -232,6 +232,21 @@ footer .link:hover {
 	padding: 0;
 	margin: -5px;
 }
+.status {
+	margin: 1rem 0;
+	display: inline-block;
+	width: 48%;
+}
+.status h2,
+h3 {
+	margin: 0;
+}
+.pop-out {
+	transition: all 0.4s ease-in-out;
+}
+.pop-out:hover {
+	transform: scale(1.3);
+}
 @media only screen and (max-width: 770px) {
 	.brand-name {
 		font-size: 2.5rem;
