@@ -207,10 +207,10 @@ footer .link:hover {
 	color: var(--secondary-color-light);
 }
 .form {
-	width: 100%;
-	height: 960px;
+	width: 800px;
+	height: 1030px;
 	overflow: hidden;
-	margin: 0;
+	margin: 2rem auto;
 }
 .blog {
 	padding: 2rem 4rem 3rem;
