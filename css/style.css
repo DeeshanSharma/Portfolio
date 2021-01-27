@@ -160,10 +160,10 @@ p {
 	width: 70%;
 	max-width: 350px;
 	margin: 4rem auto 0;
-	border-radius: 50%;
+	border-radius: 50% 50% 0 0;
 }
 .section {
-	padding: 1rem;
+	padding: 0 1rem 1rem;
 	color: var(--secondary-color-light);
 }
 .pink-colored {
@@ -208,7 +208,7 @@ footer .link:hover {
 }
 .form {
 	width: 800px;
-	height: 1030px;
+	height: 1170px;
 	overflow: hidden;
 	margin: 2rem auto;
 }
@@ -268,8 +268,12 @@ h3 {
 	.nav-links {
 		font-size: 1rem;
 	}
-	nav .link {
-		padding: 0.2rem;
+	nav .link,
+	nav .inline-list-items {
+		padding: 0.05rem;
+	}
+	.section {
+		padding: 0 0 1rem;
 	}
 	.footer-section {
 		display: block;
