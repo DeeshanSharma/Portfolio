@@ -1,99 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		<script src="https://kit.fontawesome.com/e231f5c914.js" crossorigin="anonymous"></script>
-		<title>Zoom Bot | Deeshan Sharma</title>
-	</head>
 
-	<body>
-		<nav class="navigation">
-			<div class="nav-brand"><a href="/" class="link"> Deeshan Sharma</a></div>
-			<ul class="list nav-links">
-				<li class="inline-list-items">
-					<a class="link nav-btn" href="/">Home</a>
-				</li>
-				<li class="inline-list-items">
-					<a class="link nav-btn" href="/projects.html">Projects</a>
-				</li>
-				<li class="inline-list-items">
-					<a class="link nav-btn" href="/blogs.html">Blogs</a>
-				</li>
-			</ul>
-		</nav>
-		<header class="hero">
-			<h1 class="brand-name">Behind The Scenes:  <span>Zoom Bot</span></h1>
-			<p class="desc">Python automation that will open the Zoom app and join the meetings and wait till the next meeting and repeat.</p>
-		</header>
-		<section class="section">
-			<div class="container purple-section blog">
-				<p><h2>Back Story:</h2>So, my father recived a call from my college they said that I don't attend my online lectures and I have really low attendance and my father got really angry and scholded me really hard, but I was busy learning Web Development. So, I have to do something about it, about my attendance. So. I got an idea to create a Python Bot which will take my classes when I am not so that my attendance are maintained and I can concentrate on working my web development skills.<br><br><h2>Requirements:</h2>So, the first requirement is to get the meeting id and it's password. Now second thing is to look for the schedule and check it if any class is present or not if yes get the time and open the zoom app on time and then to click on join button and enter the meeting url then click the check boxe to disable my video or I can also set this setting to default and click on join to successfully join the meeting, else sleep.<br><br><h2>Main Process:</h2>So I will first create a new directory and initialze a git repo and then start by creating a virtual environment. Now I will break the whole problem, so I need to the following things:
-				<ol>
-					<li>Open the timetable.json file to check for the class timmings</li>
-					<li>Check for the class according to today's day and time</li>
-					<li>Open Zoom App</li>
-					<li>Click the button</li>
-					<li>Enter the link and again click the button</li>
-				</ol><br>
-				So, I will start with the easiest thing first open the Zoom app. So, for that I will use the subprocess module and give the path of the zoom app as raw string and this will open the app. Now moving to the timetable part, I will use json for this purpose the idea is to create a json file with the week days name as keys and the array of the class time as the value. Now I will create a function to read all the data from the timetable.json file and return it. Now I will create a checkClass function to check for the class time according to today's day and current time. So, first of all I got today's day and current time using the datetime module and then get the schedule of the matching day into a variable and then inside an infinite while loop it will match current time with the schedule and if it matches, then call the openZoom function and wait till the class gets over. Now it's time to test the program so for this I will set the time as 2 min after the current time and run all the file and wait. So, the program is running correctly it worked as desired. Now I need to write a function to join the class so fir that the bot has to click on some of the buttons and also enter some text so I need to figure out some way so that the bot can identify the buttons and perform some gui actions. So, after Googling for some time I got the solution and it is a python module which is capable of doing all of these and the module is pyautogui. So, I will start by pip installing the module and then continue. So, this module supports finding things by sample image on the screen so I will take advantage of this thing and take the screenshot of those buttons which I want my bot to click on and then give that to the module's locateCenterOnScreen function and store that to a variable and then use another function moveto to move the cursor on that button and then call the click function to perform a left click on it and perform the same thing to the other buttons too. So, now I am thinking as it is the repeated thing so why not create another function to perform that and just pass the image file to that function and call it whenever I need. Now I need those images so I will start zoom and use a utility available in Windows 10 called snip and sketch to snip those buttons and save them to the images folder in the same directory and then pass the path to the function call. So, now I have snaped those buttons and now it's time to check if the function is working or not so I have passed the main screen join button image to the function. So, the test was successful now I can continue writting further. So, I am done writting the whole process for joining a meeting and also tested it and it's working correctly. Now it's time to go further and pass it the meeting ID and it's password so I have created another file link.py and declared two variables there and imported that in the main file and passed that where ever needed I have also written a function to write the text to the fields and then hit the enter button, So. everything is done now it's time to check the program against real meeting so I created a meeting from my another zoom account and then added meeting ID and password to the link.py file and now I will test the joinClass function. So, the test is successful and my bot is joining the meeting and working correctly without any errors so now I will push the code. So, today I had 4 lectures and the Bot performed really awesome and it took all the lectures joined every meeting on time without any error so it's time to show this to my bois and gals they will be surprised and will also ask for it.</p>
-				<br />
-				<a href="https://github.com/DeeshanSharma/Zoom-Bot" class="link secondary-link" target="_blank">Source Code</a>
-			</div>
-		</section>
-		<footer>
-			<div class="footer">
-				<div class="footer-section">
-					<div class="footer-heading desc">Site Map:</div>
-					<ul class="list">
-						<li class="inline-list-items">
-							<a class="link" href="/"><i class="fas fa-home"></i> Home</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="/projects.html"><i class="fas fa-lightbulb"></i> Projects</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="/blogs.html"><i class="fas fa-book-open"></i> Blogs</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="/feedback-suggestions.html"><i class="fas fa-comments"></i> Feedback & Suggestions</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-section">
-					<div class="footer-heading desc">Let's Connect Find Me Here:</div>
-					<ul class="list social">
-						<li class="inline-list-items">
-							<a class="link" href="https://www.instagram.com/i_am___unknown__" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="https://github.com/DeeshanSharma" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="https://twitter.com/DeeshanSharma_" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-						</li>
-						<li class="inline-list-items">
-							<a class="link" href="https://www.youtube.com/c/TechTeach_ds" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="lower-footer">
-				<small>�2020 Deeshan Sharma</small>
-				<ul class="list social-icons">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<script src="https://kit.fontawesome.com/e231f5c914.js" crossorigin="anonymous"></script>
+	<title>Zoom Bot | Deeshan Sharma</title>
+</head>
+
+<body>
+	<nav class="navigation">
+		<div class="nav-brand"><a href="/" class="link"> Deeshan Sharma</a></div>
+		<ul class="list nav-links">
+			<li class="inline-list-items">
+				<a class="link nav-btn" href="/">Home</a>
+			</li>
+			<li class="inline-list-items">
+				<a class="link nav-btn" href="/projects.html">Projects</a>
+			</li>
+			<li class="inline-list-items">
+				<a class="link nav-btn" href="/blogs.html">Blogs</a>
+			</li>
+		</ul>
+	</nav>
+	<header class="hero">
+		<h1 class="brand-name">Behind The Scenes: <span>Zoom Bot</span></h1>
+		<p class="desc">Python automation that will open the Zoom app and join the meetings and wait till the next
+			meeting and repeat.</p>
+	</header>
+	<section class="section">
+		<div class="container purple-section blog">
+			<p>
+			<h2>Back Story:</h2>So, my father recived a call from my college they said that I don't attend my online
+			lectures and I have really low attendance and my father got really angry and scholded me really hard, but I
+			was busy learning Web Development. So, I have to do something about it, about my attendance. So. I got an
+			idea to create a Python Bot which will take my classes when I am not so that my attendance are maintained
+			and I can concentrate on working my web development skills.<br><br>
+			<h2>Requirements:</h2>So, the first requirement is to get the meeting id and it's password. Now second thing
+			is to look for the schedule and check it if any class is present or not if yes get the time and open the
+			zoom app on time and then to click on join button and enter the meeting url then click the check boxe to
+			disable my video or I can also set this setting to default and click on join to successfully join the
+			meeting, else sleep.<br><br>
+			<h2>Main Process:</h2>So I will first create a new directory and initialze a git repo and then start by
+			creating a virtual environment. Now I will break the whole problem, so I need to the following things:
+			<ol>
+				<li>Open the timetable.json file to check for the class timmings</li>
+				<li>Check for the class according to today's day and time</li>
+				<li>Open Zoom App</li>
+				<li>Click the button</li>
+				<li>Enter the link and again click the button</li>
+			</ol><br>
+			So, I will start with the easiest thing first open the Zoom app. So, for that I will use the subprocess
+			module and give the path of the zoom app as raw string and this will open the app. Now moving to the
+			timetable part, I will use json for this purpose the idea is to create a json file with the week days name
+			as keys and the array of the class time as the value. Now I will create a function to read all the data from
+			the timetable.json file and return it. Now I will create a checkClass function to check for the class time
+			according to today's day and current time. So, first of all I got today's day and current time using the
+			datetime module and then get the schedule of the matching day into a variable and then inside an infinite
+			while loop it will match current time with the schedule and if it matches, then call the openZoom function
+			and wait till the class gets over. Now it's time to test the program so for this I will set the time as 2
+			min after the current time and run all the file and wait. So, the program is running correctly it worked as
+			desired. Now I need to write a function to join the class so fir that the bot has to click on some of the
+			buttons and also enter some text so I need to figure out some way so that the bot can identify the buttons
+			and perform some gui actions. So, after Googling for some time I got the solution and it is a python module
+			which is capable of doing all of these and the module is pyautogui. So, I will start by pip installing the
+			module and then continue. So, this module supports finding things by sample image on the screen so I will
+			take advantage of this thing and take the screenshot of those buttons which I want my bot to click on and
+			then give that to the module's locateCenterOnScreen function and store that to a variable and then use
+			another function moveto to move the cursor on that button and then call the click function to perform a left
+			click on it and perform the same thing to the other buttons too. So, now I am thinking as it is the repeated
+			thing so why not create another function to perform that and just pass the image file to that function and
+			call it whenever I need. Now I need those images so I will start zoom and use a utility available in Windows
+			10 called snip and sketch to snip those buttons and save them to the images folder in the same directory and
+			then pass the path to the function call. So, now I have snaped those buttons and now it's time to check if
+			the function is working or not so I have passed the main screen join button image to the function. So, the
+			test was successful now I can continue writting further. So, I am done writting the whole process for
+			joining a meeting and also tested it and it's working correctly. Now it's time to go further and pass it the
+			meeting ID and it's password so I have created another file link.py and declared two variables there and
+			imported that in the main file and passed that where ever needed I have also written a function to write the
+			text to the fields and then hit the enter button, So. everything is done now it's time to check the program
+			against real meeting so I created a meeting from my another zoom account and then added meeting ID and
+			password to the link.py file and now I will test the joinClass function. So, the test is successful and my
+			bot is joining the meeting and working correctly without any errors so now I will push the code. So, today I
+			had 4 lectures and the Bot performed really awesome and it took all the lectures joined every meeting on
+			time without any error so it's time to show this to my bois and gals they will be surprised and will also
+			ask for it.</p>
+			<br />
+			<a href="https://github.com/DeeshanSharma/Zoom-Bot" class="link secondary-link" target="_blank">Source
+				Code</a>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<div class="footer-section">
+				<div class="footer-heading desc">Site Map:</div>
+				<ul class="list">
 					<li class="inline-list-items">
-						<a href="https://www.instagram.com/i_am___unknown__" class="link" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a class="link" href="/"><i class="fas fa-home"></i> Home</a>
 					</li>
 					<li class="inline-list-items">
-						<a href="https://github.com/DeeshanSharma" class="link" target="_blank"><i class="fab fa-github"></i></a>
+						<a class="link" href="/projects.html"><i class="fas fa-lightbulb"></i> Projects</a>
 					</li>
 					<li class="inline-list-items">
-						<a href="https://twitter.com/DeeshanSharma_" class="link" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a class="link" href="/blogs.html"><i class="fas fa-book-open"></i> Blogs</a>
+					</li>
+					<li class="inline-list-items">
+						<a class="link" href="/feedback-suggestions.html"><i class="fas fa-comments"></i> Feedback &
+							Suggestions</a>
 					</li>
 				</ul>
 			</div>
-		</footer>
-	</body>
+			<div class="footer-section">
+				<div class="footer-heading desc">Let's Connect Find Me Here:</div>
+				<ul class="list social">
+					<li class="inline-list-items">
+						<a class="link" href="https://www.instagram.com/deeshansharma_" target="_blank"><i
+								class="fab fa-instagram"></i> Instagram</a>
+					</li>
+					<li class="inline-list-items">
+						<a class="link" href="https://github.com/DeeshanSharma" target="_blank"><i
+								class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li class="inline-list-items">
+						<a class="link" href="https://twitter.com/DeeshanSharma_" target="_blank"><i
+								class="fab fa-twitter"></i> Twitter</a>
+					</li>
+					<li class="inline-list-items">
+						<a class="link" href="https://www.youtube.com/c/TechTeach_ds" target="_blank"><i
+								class="fab fa-youtube"></i> YouTube</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="lower-footer">
+			<small>�2020 Deeshan Sharma</small>
+			<ul class="list social-icons">
+				<li class="inline-list-items">
+					<a href="https://www.instagram.com/deeshansharma_" class="link" target="_blank"><i
+							class="fab fa-instagram"></i></a>
+				</li>
+				<li class="inline-list-items">
+					<a href="https://github.com/DeeshanSharma" class="link" target="_blank"><i
+							class="fab fa-github"></i></a>
+				</li>
+				<li class="inline-list-items">
+					<a href="https://twitter.com/DeeshanSharma_" class="link" target="_blank"><i
+							class="fab fa-twitter"></i></a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
 </html>
