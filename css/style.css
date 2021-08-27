@@ -311,14 +311,6 @@ h3 {
     width: max-content;
   }
 
-  .nav-brand {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    font-size: 1rem;
-  }
-
   nav .link,
   nav .inline-list-items {
     padding: 0.05rem;
@@ -352,7 +344,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 362px) {
+@media only screen and (max-width: 446px) {
   .navigation {
     justify-content: center;
   }
